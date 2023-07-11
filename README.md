@@ -1,6 +1,6 @@
-
 # LogoMaker
-![License](https://img.shields.io/badge/license-MIT-blue)
+
+![GitHub](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description
     
@@ -12,20 +12,33 @@ a Node.js command-line application that takes in user input to generate a logo a
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-    
+- [Tests](#tests)
+- [Questions](#questions)
+
 ## Installation
-    
-n/a
+
+To install necessary dependencies, run the following command:
+
+npm i
     
 ## Usage
     
-![alt text](assets/images/screenshot.gif)
+![alt text](assets/images/)
     
 ## Credits
     
-n/a
+N/A
     
 ## License
 
 This project is licensed under the MIT license.
     
+## Tests
+​
+To run tests, run the following command:
+​
+npm test
+​
+## Questions
+​
+If you have any questions about the repo, open an issue or contact me directly at w.andrew.loverde@gmail.com. You can find more of my work at [wloverde](https://github.com/wloverde/).
