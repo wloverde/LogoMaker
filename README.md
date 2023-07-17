@@ -19,10 +19,17 @@ a Node.js command-line application that takes in user input to generate a logo a
 
 To install necessary dependencies, run the following command:
 
+```
 npm i
+```
     
 ## Usage
-    
+
+application can be ran by typing the following command and following prompts
+
+```
+node .\index.js
+```    
 ![alt text](assets/images/)
     
 ## Credits
