@@ -2,7 +2,7 @@
 const { write } = require('fs');
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
-
+const shape = require('./assets/lib/shapes');
 // array that in input into inquirer.prompt() for terminal input
 const questions = () => {
     return inquirer
@@ -34,39 +34,17 @@ const questions = () => {
             },
         ])
 };
-// returns value based off shape selection
-const shapeChoice = shape => {
-    if (shape === 'circle') {
-        return '<circle cx="150" cy="100" r="80"';
-    } else if (shape === 'triangle') {
-        return '<polygon points="150, 18 244, 182 56, 182"'
-    } else { //return square shape
-        return '<rect x="75" y="25" width="150" height="150"'
-    }
-}
 
-// shifts text down to fit triangle background
-const textPlacement = shape => {
-    if (shape === 'triangle') {
-        return 160
-    } else { 
-        return 125
-    }
-}
 
 // write SVG File
 const generateSVG  = ({text,textColor,shape,logoColor}) => {
-
-    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-
-${shapeChoice(shape)}
-fill="${logoColor}" />
-  
-<text x="150" y="${textPlacement(shape)}" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
-  
-</svg>`
-
-
+    if (shape === 'circle') {
+        return new Circle(text, textColor, logoColor).render();
+    } else if (shape === 'triangle') {
+        return new Triangle(text, textColor, logoColor).render();
+    } else { //return square shape
+        return new Square(text, textColor, logoColor).render();
+    }
 }
 
 // Create a function to initialize app
