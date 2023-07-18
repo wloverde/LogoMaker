@@ -43,7 +43,6 @@ fill="${this.logoColor}" />
 class Square extends Shape{
     constructor(text,textColor,logoColor) {
         super (text,textColor,logoColor);
-        // this.render = 
     }
 
     render(){
@@ -61,7 +60,6 @@ fill="${this.logoColor}" />
 class Triangle extends Shape{
     constructor(text,textColor,logoColor) {
         super (text,textColor,logoColor);
-        this.render = 
     }
 
     render(){
@@ -75,3 +73,4 @@ fill="${this.logoColor}" />
 </svg>`
     }
 }
+module.exports = {Shape,Circle,Square,Triangle};

@@ -2,7 +2,7 @@
 const { write } = require('fs');
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
-const shape = require('./assets/lib/shapes');
+const Shape = require('./assets/lib/shapes');
 // array that in input into inquirer.prompt() for terminal input
 const questions = () => {
     return inquirer
@@ -39,11 +39,11 @@ const questions = () => {
 // write SVG File
 const generateSVG  = ({text,textColor,shape,logoColor}) => {
     if (shape === 'circle') {
-        return new Circle(text, textColor, logoColor).render();
+        return new Shape.Circle(text, textColor, logoColor).render();
     } else if (shape === 'triangle') {
-        return new Triangle(text, textColor, logoColor).render();
+        return new Shape.Triangle(text, textColor, logoColor).render();
     } else { //return square shape
-        return new Square(text, textColor, logoColor).render();
+        return new Shape.Square(text, textColor, logoColor).render();
     }
 }
 
