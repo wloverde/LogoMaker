@@ -30,7 +30,7 @@ application can be ran by typing the following command and following prompts
 ```
 node .\index.js
 ```    
-![alt text](assets/images/)
+[Video Tutorial](https://drive.google.com/file/d/1TTTtHotl8Nt8Jo7mAoWHHwUiMU2F_acN/view)
     
 ## Credits
     
